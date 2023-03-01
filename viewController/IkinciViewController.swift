@@ -9,16 +9,16 @@ import UIKit
 
 class IkinciViewController: UIViewController {
 
-    var verilenSifre = ""
+    var givenPassword = ""
     
     @IBOutlet weak var SecondLabel: UILabel!
     
-    @IBOutlet weak var Passaword: UILabel!
+    @IBOutlet weak var Password: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Passaword.text = verilenSifre
+        Password.text = givenPassword
     }
     
 

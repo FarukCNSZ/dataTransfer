@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var alinanSifre = ""
+    var receivedPassword = ""
     
     @IBOutlet weak var FirstLabel: UILabel!
     
@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     
     @IBAction func ButtonForCheck(_ sender: Any) {
         
-        alinanSifre = FirstText.text!
+        receivedPassword = FirstText.text!
         
-        if alinanSifre == "faruk"{
+        if receivedPassword == "faruk"{
             
             performSegue(withIdentifier: "toSecondVC", sender: nil)
-            FirstLabel.text = "Şifre Doğru"
+            FirstLabel.text = "Password Correct"
         }else {
-            FirstLabel.text = "Şifre Yanlış"
+            FirstLabel.text = "Password Wrong"
         }
     }
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         if segue.identifier == "toSecondVC" {
             
             let destinationVC = segue.destination as! IkinciViewController
-            destinationVC.verilenSifre = alinanSifre
+            destinationVC.givenPassword = receivedPassword
         }
         
     }
